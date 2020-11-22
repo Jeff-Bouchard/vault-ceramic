@@ -1,0 +1,38 @@
+{
+    "name": "vault-ceramic",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "watch": "webpack serve",
+        "build": "webpack"
+    },
+    "dependencies": {
+        "3id-connect": "1.0.0-alpha.4",
+        "@ceramicnetwork/3id-did-resolver": "^0.4.7",
+        "@ceramicnetwork/ceramic-core": "^0.12.0",
+        "@ceramicnetwork/ceramic-http-client": "^0.7.1",
+        "@ceramicnetwork/key-did-resolver": "^0.1.2",
+        "@ceramicstudio/idx-tools": "^0.3.1",
+        "@ceramicstudio/idx-web": "^0.2.0",
+        "multiformats": "^3.0.3",
+        "uint8arrays": "^1.1.0",
+        "web3modal": "^1.9.1"
+    },
+    "devDependencies": {
+        "@tsconfig/svelte": "^1.0.10",
+        "@webpack-cli/serve": "^1.1.0",
+        "buffer": "^6.0.2",
+        "dataloader": "^2.0.0",
+        "did-jwt": "^4.6.2",
+        "nanoid": "^3.1.18",
+        "skynet-js": "^2.9.0",
+        "svelte": "^3.29.7",
+        "svelte-loader": "^2.13.6",
+        "ts-loader": "^8.0.8",
+        "typescript": "^4.0.5",
+        "webpack": "^4.0.0",
+        "webpack-cli": "^4.2.0",
+        "webpack-dev-server": "^3.11.0"
+    }
+}
