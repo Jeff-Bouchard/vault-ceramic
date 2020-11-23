@@ -8,7 +8,9 @@
 
     const unlock = async () => {
         disabled = true;
-        authenticate().then(keyPair => dispatch('unlock', { keyPair }));
+        authenticate()
+            .then(keyPair => dispatch('unlock', { keyPair }))
+            .catch(error => alert('You have to install an Ethereum client.'));
     }
 </script>
 
@@ -36,12 +38,11 @@
         cursor: pointer;
         text-align: center;
         position: relative;
+        overflow: hidden;
     }
-    button img {
+    button svg {
         display: none;
         position: absolute;
-        height: 40px;
-        width: 40px;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -54,7 +55,7 @@
     button:disabled span {
         display: none;
     }
-    button:disabled img {
+    button:disabled svg {
         display: block;
     }
 </style>
@@ -72,6 +73,9 @@
 
     <button type="button" on:click={unlock} {disabled}>
         <span>Authenticate</span>
-        <img src="images/ball-triangle.svg" alt="Animation">
+
+        <svg width="48" height="48">
+            <use xlink:href="#icon-loading" />
+        </svg>
     </button>
 </main>
